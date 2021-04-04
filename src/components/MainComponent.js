@@ -8,9 +8,7 @@ function Main() {
     return (
         <Fragment>
             <Header />
-            <div className="container-fluid">
-                <Content />
-            </div>
+            <Content />
             <Footer />
         </Fragment>
 
