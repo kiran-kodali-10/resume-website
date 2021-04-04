@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +35,26 @@
   to {
     transform: rotate(360deg);
   }
+} */
+body{
+  background-color: #282c34;
+  /* color: #fff; */
+  /* padding-top: 70px; */
+}
+
+html{
+  scroll-behavior: smooth !important;
+
+}
+
+/* h2{
+  text-transform: uppercase;
+  font-size: 2rem;
+} */
+
+#section2, #section3, #section1, #section4{
+  height: 500px;
+  /* padding-top: 90px; */
+  scroll-behavior: smooth;
+  /* transition: 0.5s; */
 }
