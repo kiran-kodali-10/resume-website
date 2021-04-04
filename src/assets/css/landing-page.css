@@ -1,0 +1,30 @@
+.profile-photo{
+    background-image: url("../img/landing-page-image-2.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+    place-items: center;
+}
+
+.mask-background{
+    background-color: #414141c2;
+    height: 100%;
+}
+
+.flex-center{
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.main-typography{
+    padding: 20px;
+    border: 6px solid #343a40;
+    border-radius: 20px;
+    color: #fff;
+    height: fit-content;
+}
