@@ -1,6 +1,7 @@
 import { React } from "react";
 import "../assets/css/content.css";
 import LandingPage from "../views/LandingPage/LandingPage";
+import EducationSection from "../views/EducationSection/Education";
 function Content(){
 
     return(
@@ -9,7 +10,7 @@ function Content(){
             <LandingPage />
 
             <div id="about-section">
-                <h2> section-1 </h2>
+               <EducationSection />
 
             </div>
 
