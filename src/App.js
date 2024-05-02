@@ -9,9 +9,7 @@ const history = createBrowserHistory();
 function App() {
   return (
     <div className="App">
-      {/* <BrowserRouter > */}
-        <Main />
-      {/* </BrowserRouter> */}
+      <Main />
     </div>
   );
 }

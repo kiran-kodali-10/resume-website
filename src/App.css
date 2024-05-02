@@ -21,11 +21,30 @@ html{
   transition: 0.5s;
 }
 
+/* .nav-item */
+
 /* Custom Card styles */
 .custom-card-dark{
   color: #ffffffd0;
   background-color: #282c34 !important;
 }
-.education-card{
-  /* width: 300px !important; */
+
+.footer{
+  position: fixed;
+  /* position: relative; */
+  left: 0;
+  bottom: 0;
+  background-color: #343a40;
+  width: 100%;
+  /* min-height: 2em; */
+  color: white;
+  padding: 24px;
+}
+
+.text-muted {
+  font-size: 14px;
+}
+
+.footer-container{
+  text-align: center;
 }

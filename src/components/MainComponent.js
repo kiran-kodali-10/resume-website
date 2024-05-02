@@ -8,7 +8,7 @@ function Main() {
     return (
         <Fragment>
             <Header />
-            <Content />
+            {/* <Content /> */}
             <Footer />
         </Fragment>
 

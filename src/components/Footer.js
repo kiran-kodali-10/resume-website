@@ -1,13 +1,17 @@
 import { React } from "react";
 // Import css file
-import '../assets/css/footer.css';
-
+import '../App.css';
 
 export default function Footer(){
-
+    const currentYear = new Date().getFullYear();
     return(
-        <div className="footer">
-            <h1>This is Footer</h1>
-        </div>
+        <footer className="footer">
+            <div className="footer-container">
+                {/* 
+                    TO-DO: Add the social media links and icons here
+                */}
+            <span className="text-muted">&copy; {currentYear} Kiran Kodali. All rights reserved.</span>
+            </div>
+        </footer>
     )
 }
