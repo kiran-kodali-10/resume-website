@@ -12,15 +12,15 @@ export default function ContactForm() {
     }
 
     return (
-        <div className="">
+        <div className="contact-page-container">
             <Row>
                 <Col lg="6" md="6">
-                    <Card>
-                        <CardHeader>Contact Me</CardHeader>
-                        <CardBody className="bg-dark" style={{color:"white"}}>
-                            <Row className="mt-3">
+                    {/* <Card className='bg-dark text-white'> */}
+                        {/* <CardHeader >Contact Me</CardHeader> */}
+                        {/* <CardBody  style={{color:"white"}}> */}
+                            <Row className="mt-3 ">
                                 <Col lg='4' md='4'><Label htmlFor="firstName">First Name</Label></Col>
-                                <Col><Input type="text" htmlFor="firstName" /></Col>
+                                <Col><Input className='bg-dark text-white' type="text" htmlFor="firstName" /></Col>
                             </Row>
                             <Row className="mt-3">
                                 <Col lg='4' md='4'><Label htmlFor="firstName">Last Name</Label></Col>
@@ -34,8 +34,8 @@ export default function ContactForm() {
                                 <Col lg='4' md='4'><Label htmlFor="firstName">Mobile Number</Label></Col>
                                 <Col><Input type="text" htmlFor="firstName" /></Col>
                             </Row>
-                        </CardBody>
-                    </Card>
+                        {/* </CardBody> */}
+                    {/* </Card> */}
                 </Col>
             </Row>
         </div>
