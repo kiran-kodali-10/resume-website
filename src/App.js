@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import Footer from './components/Footer';
 import Header from "./components/Header";
 import ContactForm from './views/ContactPage/Contact';
@@ -16,7 +16,7 @@ function App() {
 
       <ExperiencePage />
 
-      <ContactForm />
+      {/* <ContactForm /> */}
 
       <Footer />
     </div>

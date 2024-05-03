@@ -1,6 +1,3 @@
-import Timeline from "../../components/TimelineComponent/TimelineComponent";
-
-
 // Page to represent the timeline of experience.
 function ExperiencePage(props) {
 
@@ -16,12 +13,9 @@ function ExperiencePage(props) {
 
     return (
         <div className="experience-container">
-            <div className="timeline-container">
-                <h1>Experience Timeline</h1>
-                <div>
-
-                </div>
-            </div>
+           <div className="container">
+            <h1>asdf</h1>
+           </div>
         </div>
     )
 

@@ -1,0 +1,103 @@
+/* app.sas */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff !important;
+  text-align: left;
+  background-color: #1a1a1a !important;
+}
+
+html {
+  scroll-behavior: smooth !important;
+
+}
+
+#about-section,
+#experience-section,
+#projects-section,
+#contact-section {
+  height: 500px;
+  padding-top: 90px;
+  scroll-behavior: smooth;
+  transition: 0.5s;
+}
+
+// Navbar styles.
+.navbar-container {
+  font-weight: bold;
+  /* Initial background color with transparency */
+  transition: background-color 0.3s ease-in-out;
+  z-index: 1000;
+
+  .navbar-container.scrolled {
+    background-color: #343a40 !important;
+  }
+
+  .nav-item:hover {
+    background-color: #00BCD4;
+    border-radius: 5px;
+  }
+}
+
+/* Custom Card styles */
+.custom-card-dark {
+  color: #ffffffd0;
+  background-color: #282c34 !important;
+}
+
+// Experience Section styles.
+.experience-container {
+  .container {
+    /* Your container styles */
+
+    /* Position relative is required for absolute positioning of pseudo-element */
+    position: relative;
+
+    /* Center the contents horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    background-color: #fff;
+    height: 100%;
+  }
+
+  .container::after {
+    /* Vertical line properties */
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    /* Adjust thickness as needed */
+    background-color: #fff;
+    /* Line color */
+  }
+}
+
+/* Footer Styles */
+.footer {
+  position: fixed;
+  /* position: relative; */
+  left: 0;
+  bottom: 0;
+  background-color: #343a40;
+  width: 100%;
+  /* min-height: 2em; */
+  color: white;
+  padding: 24px;
+
+  .text-muted {
+    font-size: 14px;
+
+  }
+
+  .footer-container {
+    text-align: center;
+  }
+}
