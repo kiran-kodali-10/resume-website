@@ -1,3 +1,6 @@
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Row, Col, Card, CardHeader, CardBody, Input, Label } from 'reactstrap';
 
@@ -6,48 +9,66 @@ export default function ContactForm() {
         console.log("inside contact Form")
     })
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(event);
-    }
+
+    const contactDetails = [
+        {
+            "socialName": "LinkedIn",
+            "icon": faLinkedin,
+            "link": "https://www.linkedin.com/in/kiran-kodali/ ",
+            "renderLink": true,
+        },
+        {
+            "socialName": "Github",
+            "icon": faGithub,
+            "link": "https://github.com/kiran-kodali-10",
+            "renderLink": true,
+        },
+        {
+            "socialName": "Phone",
+            "icon": faPhone,
+            "link": "+1(669) 666-4652",
+            "renderLink": false,
+        },
+        {
+            "socialName": "Email",
+            "icon": faEnvelope,
+            "link": "kiran.kodali10@gmail.com",
+            "renderLink": false
+        },
+    ]
+
 
     return (
         <div className="contact-page-container">
             <Row>
-                <Col lg="6" md="6">
-                    {/* <Card className='bg-dark text-white'> */}
-                        {/* <CardHeader >Contact Me</CardHeader> */}
-                        {/* <CardBody  style={{color:"white"}}> */}
-                            <Row className="mt-3 ">
-                                <Col lg='4' md='4'><Label htmlFor="firstName">First Name</Label></Col>
-                                <Col><Input className='bg-dark text-white' type="text" htmlFor="firstName" /></Col>
-                            </Row>
-                            <Row className="mt-3">
-                                <Col lg='4' md='4'><Label htmlFor="firstName">Last Name</Label></Col>
-                                <Col><Input type="text" htmlFor="firstName" /></Col>
-                            </Row>
-                            <Row className="mt-3">
-                                <Col lg='4' md='4'><Label htmlFor="firstName">Email</Label></Col>
-                                <Col><Input type="text" htmlFor="firstName" /></Col>
-                            </Row>
-                            <Row className="mt-3">
-                                <Col lg='4' md='4'><Label htmlFor="firstName">Mobile Number</Label></Col>
-                                <Col><Input type="text" htmlFor="firstName" /></Col>
-                            </Row>
-                        {/* </CardBody> */}
-                    {/* </Card> */}
-                </Col>
+                {
+                    contactDetails.map((value, key) => {
+                        console.log(value);
+                        console.log(key);
+                        return (
+                            <Col  key={key}>
+                                {
+                                    value['renderLink'] ?
+                                        <a href={value['link']} className="icon-link" target="_blank" rel="noopener noreferrer" >
+                                            <div className='icon-container'>
+                                                <FontAwesomeIcon icon={value['icon']} className='circular-icon' />
+                                            </div>
+                                            <p className='icon-text-socials'> {value['socialName']} </p>
+                                        </a>
+                                        :
+                                        <div className='icon-link'>
+                                            <div className='icon-container'>
+                                                <FontAwesomeIcon icon={value['icon']} className='circular-icon' />
+                                            </div>
+                                            <p className='icon-text-socials'> {value['link']} </p>
+                                        </div>
+                                }
+
+                            </Col>
+                        )
+                    })
+                }
             </Row>
         </div>
-        // <div className="">
-        //     <h2>Contact Form</h2>
-        //     <form onSubmit={handleSubmit}>
-
-        //     <label htmlFor='firstName'>
-        //         <input type="text" placeholder="Enter your first name" name="firstName" />
-        //     </label>
-
-        //     </form>
-        // </div>
     )
 }

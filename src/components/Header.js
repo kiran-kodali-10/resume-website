@@ -16,6 +16,13 @@ const Header = (props) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const pages = ['About', 'Experience', 'Projects', 'Contact'];
+  const pageSections = {
+    "About": '#about-section',
+    "Experience": "#experience-section",
+    "Projects": "#project-section",
+    "Education": "#education-section",
+    "Contact": "#contact-section",
+  }
 
   const toggle = () => setIsOpen(!isOpen);
 
@@ -39,16 +46,17 @@ const Header = (props) => {
     < >
       <Navbar className={`px-4 py-4 navbar-container ${isScrolled ? 'scrolled' : ''}`} dark sticky="top" expand="md">
         <NavbarBrand href="/">
-          <h4 className="mb-0">My Resume</h4>
+          <h4 className="mb-0 website-heading">My Resume</h4>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             {
-              pages.map((page) => {
+              Object.entries(pageSections).map(([key, value]) => {
+                
                 return (
-                  <NavItem className="px-2 py-2 nav-item">
-                    <NavLink className="nav-link" href="#about-section">{page}</NavLink>
+                  <NavItem key={key} className="px-2 py-2 nav-item">
+                    <NavLink className='nav-link'  href={value}>{key}</NavLink>
                   </NavItem>
                 )
               })

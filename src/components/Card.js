@@ -4,9 +4,9 @@ export default function CustomCard({ children }) {
 
     return (
         <Card className="custom-card-dark">
-            <CardBody >
-                {children}
-            </CardBody>
+
+            {children}
+
         </Card>
     )
 }

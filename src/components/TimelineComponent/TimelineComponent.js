@@ -1,14 +1,16 @@
-import "../../assets/css/TimelineStyle.css";
+import TimelineItem from "./TimelineItem";
+import  '../../App.scss'
 
 // Timeline reusable component.
-function Timeline(){
+function Timeline({events}){
 
     return(
         <div className="timeline-container">
-            <h1>Experience Timeline</h1>
-            <div>
-                
-            </div>
+            {
+                events.map((event, idx)=>(
+                    <TimelineItem key={idx} data={event} />
+                ))
+            }
         </div>
     )
 
