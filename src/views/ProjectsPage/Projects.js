@@ -1,9 +1,13 @@
 import React from 'react';
 import { Button, Card, CardBody, Col, Row } from 'reactstrap';
 
-export default function ProjectsPage(){
+export default function ProjectsPage() {
 
-    return(
+    const handleButtonClick = (url) => {
+        window.open(url, '_blank', 'nopener,noreferrer');
+    }
+
+    return (
         <div className='projects-section-container'>
             <h4 className='section-heading'>
                 Projects
@@ -16,9 +20,13 @@ export default function ProjectsPage(){
                                 <h4 className='project-title'>
                                     Bookstore
                                 </h4>
-                                <Button  className='primary-button'>GitHub</Button>
+                                <Button className='primary-button' onClick={() => { handleButtonClick("https://github.com/kiran-kodali-10/bookstore") }}>GitHub</Button>
                                 <p className='project-description'>
-                                    Bookstore application to buy books
+                                    Engineered an online bookstore web application with React, Spring Boot, and MySQL, delivering a user-centric platform for
+                                    efficient book browsing, purchasing, and management.
+                                </p>
+                                <p className='project-description'>
+                                    Designed and implemented a comprehensive admin panel using Spring Boot, AWS Cognito, MySQL, streamlining sales monitoring, boosting operational efficiency.
                                 </p>
                             </CardBody>
                         </Card>
@@ -27,11 +35,16 @@ export default function ProjectsPage(){
                         <Card className='custom-card-dark'>
                             <CardBody>
                                 <h4 className='project-title'>
-                                    Bookstore
+                                    Seinet Cactus
                                 </h4>
-                                <Button  className='primary-button'>GitHub</Button>
+                                <Button className='primary-button' onClick={() => handleButtonClick("https://github.com/kiran-kodali-10/SEINet-Cactus")}>GitHub</Button>
                                 <p className='project-description'>
-                                    Bookstore application to buy books
+                                    Led the development of a Geo-spatial temporal mapping system for cacti discoveries using React and d3, featuring time-based data
+                                    visualization and analytics.
+                                </p>
+                                <p>
+                                    Created comprehensive visualization tools, including graphs, parallel categories, and scatter plots, for insightful analysis of cacti
+                                    data
                                 </p>
                             </CardBody>
                         </Card>
@@ -40,11 +53,15 @@ export default function ProjectsPage(){
                         <Card className='custom-card-dark'>
                             <CardBody>
                                 <h4 className='project-title'>
-                                    Bookstore
+                                    Job Hunt Application
                                 </h4>
-                                <Button  className='primary-button'>GitHub</Button>
+                                <Button className='primary-button' onClick={()=>handleButtonClick("https://github.com/kiran-kodali-10/distributed-systems-backend")}>GitHub</Button>
                                 <p className='project-description'>
-                                    Bookstore application to buy books
+                                    Developed a distributed system application with a publisher-subscriber model using Spring Boot, React for real-time job notifications.
+                                </p>
+                                <p className='project-description'>
+                                    Implemented distributed computing protocols like shared memory, leader election, gossip, and heartbeat, optimizing communication
+                                    and system reliability
                                 </p>
                             </CardBody>
                         </Card>

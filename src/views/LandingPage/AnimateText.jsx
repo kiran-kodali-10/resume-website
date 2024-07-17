@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
 // import './AnimatedText.css'; // Import the CSS file
 
-const AnimatedText = () => {
+const AnimatedText = (props) => {
   const finalText = "Kiran Kodali";
   const [text, setText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(()=>{
+   console.log(props.finalText)
+},[])
+
 
   useEffect(() => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -12,7 +17,7 @@ const AnimatedText = () => {
     let timeoutId;
 
     const generateRandomText = () => {
-      if (currentIndex < finalText.length) {
+      if (currentIndex < props.finalText.length) {
         setText((prevText) => {
           let newText = prevText.split('');
           newText[currentIndex] = characters.charAt(Math.floor(Math.random() * characters.length));
@@ -24,8 +29,8 @@ const AnimatedText = () => {
     };
 
     const updateCharacter = () => {
-      if (currentIndex < finalText.length) {
-        setText((prevText) => prevText.slice(0, currentIndex) + finalText[currentIndex] + prevText.slice(currentIndex + 1));
+      if (currentIndex < props.finalText.length) {
+        setText((prevText) => prevText.slice(0, currentIndex) + props.finalText[currentIndex] + prevText.slice(currentIndex + 1));
         setCurrentIndex((prevIndex) => prevIndex + 1);
       } else {
         clearInterval(intervalId);

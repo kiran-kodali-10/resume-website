@@ -1,10 +1,27 @@
-import { React } from "react";
+import { React, useEffect, useState } from "react";
 import { Row, Col } from "reactstrap";
 // import '../../assets/css/landing-page.css';
 import background from '../../assets/img/landing-page-image-2.jpg'
 import AnimatedText from "./AnimateText";
+import axios from "axios";
 
 export default function LandingPage() {
+
+    const [person, setPerson] = useState([]);
+    useEffect(()=>{
+        axios.get('http://54.241.68.52/api/persons/')
+        .then(response =>{
+            setPerson(response.data[0])
+        })
+        .catch(error=>{
+            console.error("error fetching persons",error);
+        })
+    },[])
+
+    useEffect(()=>{
+        console.log(person['name']);
+    },[person])
+
     return (
 
         <div className="landing-page-container">
@@ -20,7 +37,12 @@ export default function LandingPage() {
                                 "Hi, I'm "
                             } 
                             <span style={{color: "#ff014f"}}>
-                                <AnimatedText />
+                                {
+                                    person['name']?
+                                    <AnimatedText finalText={person['name']} />
+                                    :
+                                    null
+                                }
                             </span>
                             <br/>
                             <span className="header-caption">
@@ -29,14 +51,6 @@ export default function LandingPage() {
                         </h1>
 
                     </div>
-                    {/* <div className="profile-photo">
-                        <div className="mask-background flex-center">
-                            <div className="main-typography text-center align-center">
-                                <h1>KIRAN KODALI</h1>
-                                <h3>Software Developer</h3>
-                            </div>
-                        </div>
-                    </div> */}
                 </Col>
                 <Col>
                 </Col>

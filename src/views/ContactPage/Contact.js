@@ -5,9 +5,6 @@ import React from 'react';
 import { Row, Col, Card, CardHeader, CardBody, Input, Label } from 'reactstrap';
 
 export default function ContactForm() {
-    React.useEffect(() => {
-        console.log("inside contact Form")
-    })
 
 
     const contactDetails = [
@@ -43,8 +40,7 @@ export default function ContactForm() {
             <Row>
                 {
                     contactDetails.map((value, key) => {
-                        console.log(value);
-                        console.log(key);
+
                         return (
                             <Col  key={key}>
                                 {

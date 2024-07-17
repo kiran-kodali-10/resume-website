@@ -28,9 +28,9 @@ export default function EducationSection(props) {
             <h4 className="section-heading">Education</h4>
             <Row style={{ justifyContent: "space-around" }}>
                 {
-                    educationDetails.map((educationDetail) => {
+                    educationDetails.map((educationDetail, index) => {
                         return (
-                            <Col md="6" sm="12">
+                            <Col md="6" sm="12" key={index}>
                                 {/* <div className="education-card"> */}
                                 <CustomCard className="custom-card-dark">
                                     <div className="card-icon">
