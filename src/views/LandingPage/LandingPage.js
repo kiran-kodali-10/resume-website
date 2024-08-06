@@ -54,7 +54,7 @@ export default function LandingPage() {
                 </Col>
                 <Col>
                 </Col>
-            </Row>
+            </Row> 
         </div>
     )
 }
