@@ -42,7 +42,7 @@ const AnimatedText = (props) => {
 
     timeoutId = setTimeout(() => {
       clearInterval(intervalId);
-      intervalId = setInterval(updateCharacter, 150); // Change to final characters every 150ms
+      intervalId = setInterval(updateCharacter, 60); // Change to final characters every 150ms
     }, 100); // Start updating to final text after 3 seconds
 
     return () => {

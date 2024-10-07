@@ -21,17 +21,24 @@ export default function ContactForm() {
             "renderLink": true,
         },
         {
-            "socialName": "Phone",
+            "socialName": "+1(669) 666-4652",
             "icon": faPhone,
-            "link": "+1(669) 666-4652",
+            "link": "tel:+16696664652",
             "renderLink": false,
         },
         {
-            "socialName": "Email",
+            "socialName": "krian.kodali10@gmail.com",
             "icon": faEnvelope,
-            "link": "kiran.kodali10@gmail.com",
+            "link": "mailto:kiran.kodali10@gmail.com",
             "renderLink": false
         },
+        // {
+        //     "socialName": "Resume",
+        //     "icon": faEnvelope,
+        //     "link": "mailto:kiran.kodali10@gmail.com",
+        //     "renderLink": false
+        // },
+
     ]
 
 
@@ -42,24 +49,16 @@ export default function ContactForm() {
                     contactDetails.map((value, key) => {
 
                         return (
-                            <Col  key={key}>
+                            <Col key={key} md={6} sm={6} lg={3}>
                                 {
-                                    value['renderLink'] ?
-                                        <a href={value['link']} className="icon-link" target="_blank" rel="noopener noreferrer" >
-                                            <div className='icon-container'>
-                                                <FontAwesomeIcon icon={value['icon']} className='circular-icon' />
-                                            </div>
-                                            <p className='icon-text-socials'> {value['socialName']} </p>
-                                        </a>
-                                        :
-                                        <div className='icon-link'>
-                                            <div className='icon-container'>
-                                                <FontAwesomeIcon icon={value['icon']} className='circular-icon' />
-                                            </div>
-                                            <p className='icon-text-socials'> {value['link']} </p>
+                                    // value['renderLink'] ?
+                                    <a href={value['link']} className="icon-link" target="_blank" rel="noopener noreferrer" >
+                                        <div className='icon-container'>
+                                            <FontAwesomeIcon icon={value['icon']} className='circular-icon' />
                                         </div>
+                                        <p className='icon-text-socials'> {value['socialName']} </p>
+                                    </a>
                                 }
-
                             </Col>
                         )
                     })
