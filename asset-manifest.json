@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/resume-website/static/css/main.3780b42a.chunk.css",
+    "main.js": "/resume-website/static/js/main.eba96c98.chunk.js",
+    "main.js.map": "/resume-website/static/js/main.eba96c98.chunk.js.map",
+    "runtime-main.js": "/resume-website/static/js/runtime-main.d476ced6.js",
+    "runtime-main.js.map": "/resume-website/static/js/runtime-main.d476ced6.js.map",
+    "static/css/2.dc0e27a3.chunk.css": "/resume-website/static/css/2.dc0e27a3.chunk.css",
+    "static/js/2.b441dcce.chunk.js": "/resume-website/static/js/2.b441dcce.chunk.js",
+    "static/js/2.b441dcce.chunk.js.map": "/resume-website/static/js/2.b441dcce.chunk.js.map",
+    "static/js/3.d17b14d9.chunk.js": "/resume-website/static/js/3.d17b14d9.chunk.js",
+    "static/js/3.d17b14d9.chunk.js.map": "/resume-website/static/js/3.d17b14d9.chunk.js.map",
+    "index.html": "/resume-website/index.html",
+    "static/css/2.dc0e27a3.chunk.css.map": "/resume-website/static/css/2.dc0e27a3.chunk.css.map",
+    "static/css/main.3780b42a.chunk.css.map": "/resume-website/static/css/main.3780b42a.chunk.css.map",
+    "static/js/2.b441dcce.chunk.js.LICENSE.txt": "/resume-website/static/js/2.b441dcce.chunk.js.LICENSE.txt",
+    "static/media/Santa_Clara_U_Seal.svg.5f8cf676.png": "/resume-website/static/media/Santa_Clara_U_Seal.svg.5f8cf676.png",
+    "static/media/accenture-ar21.eb842ec6.svg": "/resume-website/static/media/accenture-ar21.eb842ec6.svg",
+    "static/media/gitam-logo.dcc98e8d.jpg": "/resume-website/static/media/gitam-logo.dcc98e8d.jpg",
+    "static/media/image-kiran.997d96ca.JPG": "/resume-website/static/media/image-kiran.997d96ca.JPG",
+    "static/media/landing-page-image-2.00db3886.jpg": "/resume-website/static/media/landing-page-image-2.00db3886.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d476ced6.js",
+    "static/css/2.dc0e27a3.chunk.css",
+    "static/js/2.b441dcce.chunk.js",
+    "static/css/main.3780b42a.chunk.css",
+    "static/js/main.eba96c98.chunk.js"
+  ]
+}
